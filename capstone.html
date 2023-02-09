@@ -1,0 +1,500 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Google Capstone Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Cyclistic Bike-Sharing Company</h1>
+						<p>This project analyzes trends with bike usage between casual riders and annual members with a 
+                            fictional bike-share company in Chicago, Illinois, called Cyclistic.</p>
+					</div>
+            </div>
+
+				<!-- Main -->
+					<!-- <div id="main"> -->
+                    <h2 style="text-align: center; color: white;">Table of Contents</h2>
+                    <ol style="text-align: center; list-style-position: inside; color: white;">
+                        <li><a href="#Summary" style="color: white;">Summary</a></li>
+                        <li><a href="#Ask" style="color: white;">Ask</a></li>
+                        <li><a href="#Prepare" style="color: white;">Prepare</a></li>
+                        <li><a href="#Process" style="color: white;">Process</a></li>
+                        <li><a href="#Analyze" style="color: white;">Analyze</a></li>
+                        <li><a href="#Share" style="color: white;">Share</a></li>
+                        <li><a href="#Act" style="color: white;">Act</a></li>
+                    </ol>
+                    <!-- </div> -->
+
+                    <h1 id="Summary" style="color: white; font: Monsterrat;">Summary</h1>
+                    <h2 style="color: white; font: Monsterrat">Project Background</h2>
+                    <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat">For the <b style="color: white;">Google Data Analytics 
+                        Capstone Project</b>, I have performed many real 
+                            world tasks of a junior data analyst for a marketing team of a fictional bike-share company 
+                            called <b style="color: white; ">Cyclistic</b>. Cyclistic is located in Chicago, Illinois, and offers more than 
+                            5,800 bicycles and 600 docking stations. Cyclistic has reclining bikes, hand tricycles, 
+                            and cargo bikes, making bike-share more inclusive to people with disabilities and riders 
+                            who can’t use a standard two-wheeled bike.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat">Cyclistic launched its successful bike-share offering in 2016. <b style="color: white;">Until now, Cyclistic’s marketing 
+                            strategy relied on building general awareness and appealing to broad consumer segments.</b> 
+                            One approach that helped make these things possible was the flexibility of its pricing plans: 
+                            single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride 
+                            or full-day passes are referred to as casual riders. Customers who purchase annual 
+                            memberships are Cyclistic members.
+                        </p>                            
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat">The purpose of this Case Study is to analyze how the company can 
+                            <b style="color: white;">maximize the number of annual memberships</b> with a new marketing strategy. Cyclistic’s finance 
+                            analysts have concluded that annual members are much more profitable than casual riders. 
+                            Although the pricing flexibility helps Cyclistic attract more customers, the director of marketing, 
+                            Lily Moreno, believes that maximizing the number of annual members will be key to future growth.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat">In order to answer the key business questions, I have followed the <b style="color: white;">6 
+                            Phases of Data Analysis (Ask, Prepare, Process, Analyze, Share, Act)</b> as defined in this course.
+                        </p>
+                        <br>
+                        <br>
+
+                        <h1 id="Ask" style="color: white; font: Monsterrat;">The Ask Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Stakeholder Question</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">Lily Moreno, who is the Director of Marketing and my manager in this 
+                            scenario, has set a clear goal for our data analytics team: 
+                            <b style="color: white;">Design marketing strategies aimed at converting casual riders into annual members.</b>
+                            In order to do that, however, the marketing analyst team needs to better understand how 
+                            annual members and casual riders differ, why casual riders would buy a membership, and 
+                            how digital media could affect their marketing tactics. We are interested in analyzing 
+                            the Cyclistic historical bike trip data to identify trends.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                        The business task includes the following:
+                        <ol>
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;"><b style="color: white">
+                                How do annual members and casual riders use Cyclistic bikes differently?</b></li>
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;"><b style="color: white">
+                                Why would casual riders buy Cyclistic annual memberships?</b></li>
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;"><b style="color: white">
+                                How can Cyclistic use digital media to influence casual riders to become members?</b></li>
+                        </ol>
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                        My role is to focus on the first question, how annual members and casual riders use Cyclist bikes differently.
+                        </p>
+                        <br>
+                        <br>
+
+                        <h1 id="Prepare" style="color: white; font: Monsterrat;">The Prepare Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Data Integrity</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            The dataset used for this case study can be found in <a href="https://divvy-tripdata.s3.amazonaws.com/index.html" style="color: white;">“Divvy Tripdata”</a> 
+                            and is made available by Motivate International Inc. under their license. 
+                            It is a public, open source data set fictionally designed for this Case Study.
+                        </p>  
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            There is a csv document for every month since January 2020 and the data is in wide format. For this study, 
+                            I utilized the past 12 months of data, which includes files from 
+                            <b style="color: white;">January 2022 to December 2022</b>.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            All files were securely downloaded and stored with clear file names in the format YYYYMM-divvy-tripdata.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            The content of the data contains 13 fields including information about ride IDs, dates, membership 
+                            types, and geographic locations of start and end stations. Data records varied from about 103,000 to 824,000 between the 12 files.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            The data is current and relevant, as it has been collected through this past month. It has been collected by the 
+                            bike-share company directly and has privacy protection for its customer data. There are data-privacy issues that 
+                            prohibit us from using riders’ personally identifiable information. This means that we won’t be able to connect pass 
+                            purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they 
+                            have purchased multiple single passes.
+                        </p>
+                        <br>
+                        <br>
+
+                        <h1 id="Process" style="color: white; font: Monsterrat;">The Process Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Data Cleaning and Preparation</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            This phase incorporates the steps to clean the data and prepare it for effective analysis. It is important to keep the 
+                            business task and questions in mind here in order to ensure the data needed is readily available for later use in the analysis.
+                        </p>  
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            I first used Microsoft Excel to explore and clean the data. Some of the steps I took were:
+                            <ul>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I verified all <b style="color: white">heading names</b> were meaningful and clear.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I viewed the data and stored a copy for cleaning in each month’s file.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I <b style="color: white">removed</b> rows with invalid data. I also checked and adjusted data types in each column.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I <b style="color: white">removed</b> the columns with start and end station ids and names, as too many of 
+                                    these were blank, inconsistent, or invalid. As we don’t have access to information about rider residence 
+                                    in correlation with Cyclistic service areas, I also removed the latitude and longitude columns for the stations.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    Then I created few new columns using the <b style="color: white">LEFT() and RIGHT() functions</b>
+                                    to separate the date and time in the started_at and ended_at columns into 
+                                    start_date, end_date, start_time, and end_time. This was necessary for the following steps:
+                                </li>
+                                <ol>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        I calculated the <b style="color: white">ride_length</b> by subtracting the start_time from the end_time. Considering that 
+                                        the rides may have crossed over into the next day, I crafted an IF function to 
+                                        properly calculate the elapsed time for these scenarios.
+                                    </li>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        I copied and pasted the new cells <b style="color: white">as values</b> in order to remove the started_at 
+                                        and ended_at columns without interfering with the functions.
+                                    </li>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        Finally, I added a <b style="color: white">day_of_week</b> column using the 
+                                        WEEKDAY function with 1=Sunday and 7=Saturday.
+                                    </li>
+                                </ol>
+                            </ul>
+                            </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            As the files are rather large for Microsoft Excel or Google Sheets, I then uploaded them to <b style="color: white">RStudio</b> 
+                            to finish cleaning. Some of the steps I took were:
+                            <ol>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I imported the necessary <b style="color: white;">RStudio packages</b> including:
+                                    <ul>
+                                        <li>
+                                            <b style="color: white;">'tidyverse'</b> (a meta package for ggplot2, readr, tidyr, dplyr, etc),
+                                        </li>
+                                        <li>
+                                            <b style="color: white;">'lubridate' and 'chron'</b> (used for dates), and
+                                        </li>
+                                        <li>
+                                            <b style="color: white;">'data.table'</b> (to merge files).
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    Then I uploaded all individual month files and combined them into one dataframe.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I previewed the rows and checked data types in each column to ensure they make sense.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I removed duplicates for each month, rows with N/A values, and rows that had a 
+                                    start_time later than an end_time (rows with 0 or negative ride_lengths).
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    I added columns about month, day, time, and season that would help me calculate the most frequent patterns for riding.
+                                </li>
+                            </ol>
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            The specifics to my steps above along with the code I used can be found in my 
+                            <a href="Google Capstone Project.pdf" download><b style="color: white;">RMarkdown</a></b>.
+                        </p>
+                        <br>
+                        <br>
+
+                        <h1 id="Analyze" style="color: white; font: Monsterrat;">The Analysis Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Aggregating Data</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            With my data now cleaned and organized, I can complete some calculations to better understand casual 
+                            versus member riders at Cyclistic, which is the business task set.
+                        </p>
+                        <ul>
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                I computed the <b style="color: white;">ride_length</b> and converted this time to minutes.
+                            </li>
+                            <!-- <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                I also calculated some statistical information including the <b style="color: white;">minimum, maximum, and mean ride times.</b>
+                            </li> -->
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                I also calculated some statistical information including the <b style="color: white;">minimum, maximum, and mean ride times.</b>
+                                <ul>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        For casual riders the maximum ride time was 1409 minutes (or nearly 24 hours) and 
+                                        minimum time was 1 minute. The average ride was 21 minutes.
+                                    </li>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        For member riders the maximum ride time was 1166 minutes (or nearly 20 hours) 
+                                        and minimum time was 1 minute. The average ride was 12 minutes.
+                                    </li>
+                                </ul>
+                            </li>
+                            <img src="images/minutes.JPG" style="padding-left: 20px;">
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                I compared the <b style="color: white;">number of casual and member riders</b> as well as 
+                                calculated the total number of riders.
+                                <ul>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        There are over 2 million casual riders and about 3.3 million member riders. 
+                                        The total number of riders is about 5.6 million.
+                                    </li>
+                                    <img src="images/membership.JPG" style="padding-left: 20px;">
+                                </ul>
+                            </li>
+                            <!-- <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                For member riders the maximum ride time was 1166 minutes (or nearly 20 hours) 
+                                and minimum time was 1 minute. The average ride was 12 minutes.
+                            </li> -->
+                            <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                I calculated the most frequent day and time for riding with each rider type.
+                                <ul>
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        Casual riders most frequently used Cyclistic bikes on Saturday 
+                                        while member riders preferred Thursday.
+                                    </li>
+                                    <img src="images/day.JPG" style="padding-left: 20px;">
+                                    <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                        Both types of riders used Cyclistic bikes most often during the afternoon. 
+                                    </li>
+                                    <img src="images/time.JPG" style="padding-left: 20px;">
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                        <br>
+                        <h1 id="Share" style="color: white; font: Monsterrat;">The Share Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Data Insights</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            I created a <b style="color: white;">Tableau Story</b> that I would use to present to the Cyclistic team and my manager. This presentation 
+                            answers the first question of our business task, <b style="color: white;">to contribute to the development of marketing strategies to convert 
+                            casual riders into annual members by first comparing how they each use Cyclistic.</b> 
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            The first area to focus on is how many members are casual versus annual. Our data showed us that out of 
+                            about 5.8 million members, <b style="color: white;">2.4 million or 40% are casual riders while 3.5 million or 60% are annual members.</b>
+                        </p>
+                        <img src="images/Story 1.png" style="padding-left: 20px;" width="550" height="550">
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            Looking at the types of bikes each type of rider uses is also important to 
+                            understanding the types of products users are interested in. Cyclistic offers electric and classical bikes as 
+                            well as docking stations to hold docked bikes. <b style="color: white;">Casual riders account for all of the docked bikes, but they 
+                            use electric more than the classical style of bike.</b> Annual members currently show the opposite, 
+                            using more classical than electric bikes.
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            Casual riders rode Cyclistic bikes most frequently and for the longest periods of time <b style="color: white;">during the weekend.</b> 
+                            However, annual members used the bikes mostly during the week, particularly on Tuesdays, and had a pretty 
+                            consistent ride length time throughout the week.
+                        </p>
+                        <img src="images/Story 2.png" style="padding-left: 20px;" width="550" height="550">
+                        <br>
+                        <br>
+                        <h1 id="Act" style="color: white; font: Monsterrat;">The Act Phase</h1>
+                        <h2 style="color: white; font: Monsterrat;">Recommendations</h2>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat;">
+                            Along with the recommendations from my team, I would include the following to support Cyclistic's 
+                            marketing strategies to boost casual riders into annual members:
+                            <ul>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    Offer and advertise priority service for annual memberships prior to the peak ride periods 
+                                    in the weekends, persuading casual riders to upgrade their memberships.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    Offer weekend discounts for annual members, as this is the popular riding time for the 
+                                    casual riders. Also, offer discounts on the annual membership.
+                                </li>
+                                <li style="color: white; padding-left: 20px; list-style-position: inside;">
+                                    An increase in weekend rental fees, especially for docked bikes, for casual riders is another option 
+                                    to consider a push for membership upgrade.
+                                    <img src="images/Story 3.png" style="padding-left: 20px;" width="550" height="550">
+                                </li>
+                            </ul>
+                        </p>
+                        <p style="color: white; padding-left: 20px; padding-right: 20px; font: Monsterrat; font-size:x-large;">
+                            To view the full Tableau Story Presentation, 
+                            please <a href="https://public.tableau.com/app/profile/prasad.sawant5701/viz/CapstoneProject_16752346347710/Story1" 
+                            style="color: white;">click here</a>.
+                        </p>
+                    
+
+						<!-- Featured Post -->
+							<!-- <article class="post featured">
+								<header class="major">
+								
+									<h2><a href="new.html">Google Data Analytics<br />
+									Capstone Project</a></h2>
+									<p>This project analyzes trends with bike usage between casual riders and annual members with a fictional bike-share company in Chicago, Illinois called Cyclistic.</p>
+								</header>
+								<a href="#" class="image main"><img src="images/Cycle.jpeg" alt="" /></a>
+								<ul class="actions special">
+									<li><a href="https://github.com/prasadgsaw/capstone_project/blob/main/Google_Capstone.r" class="button large">View Project</a></li>
+								</ul>
+							</article> -->
+
+						<!-- Posts -->
+							<!-- <section class="posts">
+								<article>
+									<header>
+										<span class="date">April 24, 2017</span>
+										<h2><a href="#">Sed magna<br />
+										ipsum faucibus</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 22, 2017</span>
+										<h2><a href="#">Primis eget<br />
+										imperdiet lorem</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 18, 2017</span>
+										<h2><a href="#">Ante mattis<br />
+										interdum dolor</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 14, 2017</span>
+										<h2><a href="#">Tempus sed<br />
+										nulla imperdiet</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 11, 2017</span>
+										<h2><a href="#">Odio magna<br />
+										sed consectetur</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 7, 2017</span>
+										<h2><a href="#">Augue lorem<br />
+										primis vestibulum</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+							</section> -->
+
+						<!-- Footer -->
+							<!-- <footer>
+								<div class="pagination">
+									<!--<a href="#" class="previous">Prev</a>
+									<a href="#" class="page active">1</a>
+									<a href="#" class="page">2</a>
+									<a href="#" class="page">3</a>
+									<span class="extra">&hellip;</span>
+									<a href="#" class="page">8</a>
+									<a href="#" class="page">9</a>
+									<a href="#" class="page">10</a>
+									<a href="#" class="next">Next</a>
+								</div>
+							</footer> -->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!-- <section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section> --> 
+						
+						<section class="split contact" style="align-items: center;">
+							<!-- <section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section> -->
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">prasadgsaw@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/prasad-sawant-0a1363ab?original_referer=" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+									<li><a href="https://github.com/prasadgsaw" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<!-- <div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
